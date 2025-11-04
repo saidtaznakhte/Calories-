@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cal AI Health Tracker</title>
+    
+    <meta name="description" content="An AI-powered health and fitness application to track your meals, activity, and progress towards your wellness goals." />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00C795">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#00C795',
+              'primary-light': '#E0F8F2',
+              'secondary': '#F97316',
+              'background': '#F1F5F9',
+              'card': '#FFFFFF',
+              'dark-background': '#020617',
+              'dark-card': '#1E293B',
+              'dark-border': '#334151',
+              'light-gray': '#E2E8F0', 
+              'medium-gray': '#94A3B8',
+              'dark-gray': '#475569',
+              'text-main': '#1E293B',
+              'text-light': '#64748B',
+              'dark-text-main': '#F8FAFC',
+              'dark-text-light': '#94A3B8',
+              'protein': '#EF4444',
+              'carbs': '#FBBF24',
+              'fats': '#3B82F6',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'slide-in-up': {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              'wave': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+            },
+            animation: {
+              'fade-in': 'fade-in 0.3s ease-out forwards',
+              'slide-in-up': 'slide-in-up 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+              'wave': 'wave 4s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background dark:bg-dark-background">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(registration => {
+            console.log('SW registered: ', registration);
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "short_name": "Cal AI",
+  "name": "Cal AI Health Tracker",
+  "description": "An AI-powered health and fitness application to track your meals, activity, and progress towards your wellness goals. Snap a photo of your meal for instant nutritional analysis.",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00C795",
+  "background_color": "#F1F5F9"
+}

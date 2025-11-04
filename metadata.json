@@ -1,0 +1,7 @@
+{
+  "name": "Cal AI Health Tracker",
+  "description": "An AI-powered health and fitness application to track your meals, activity, and progress towards your wellness goals. Snap a photo of your meal for instant nutritional analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
